@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="&lt;model-viewer&gt; template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer
+      src="https://cdn.glitch.global/f2692db9-36b1-4d00-9d2d-3e0a86952614/Placard.glb?v=1711864029238"
+      ar
+      ar-modes="scene-viewer webxr quick-look"
+      camera-controls
+      poster="https://cdn.glitch.global/f2692db9-36b1-4d00-9d2d-3e0a86952614/poster.png?v=1711864029955"
+      shadow-intensity="1"
+      exposure="1.03"
+      auto-rotate
+      tone-mapping="commerce"
+    >
+      <button
+        class="Hotspot"
+        slot="hotspot-1"
+        data-position="0.10821529688616159m 0.599431300564734m 0.30256249496555626m"
+        data-normal="0m 0m 1m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">Price 1000 Dhr</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-2"
+        data-position="-0.1380773173305498m 0.08135584938527485m -1.1102230246251565e-16m"
+        data-normal="0m 0m -1m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">Price 200 Dhr</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">Ar.Design</button>
+      <div id="ar-prompt">
+        <img src="ar_hand_prompt.png" />
+      </div>
+    </model-viewer>
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+    ></script>
+  </body>
+</html>
